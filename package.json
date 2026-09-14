@@ -1,0 +1,19 @@
+{
+  "name": "canteengo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "CanteenGo — Đặt món và quản lý vận hành nhà ăn, Nhóm 69",
+  "engines": {
+    "node": "24.x"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --test tests/*.test.js",
+    "check": "node --check src/server.js && node --check src/services.js && node --check src/auth.js && node --check src/db.js && node --check src/seed.js && node --check api/index.js && node --check public/app.js"
+  },
+  "dependencies": {
+    "@libsql/client": "^0.18.0"
+  }
+}

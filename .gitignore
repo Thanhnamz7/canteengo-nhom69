@@ -1,0 +1,12 @@
+data/
+*.sqlite*
+*.db
+.env*
+!.env.example
+.vercel/
+node_modules/
+.env
+*.log
+coverage/
+
+!.env.example
