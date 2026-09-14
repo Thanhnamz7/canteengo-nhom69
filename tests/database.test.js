@@ -2,6 +2,32 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import { openDatabase, openCloudDatabase, transaction } from "../src/db.js";
 import { seed } from "../src/seed.js";
+import { login } from "../src/auth.js";
+
+test("DB03 — đăng nhập sai đồng thời không đặt lại khóa 60 giây", async (t) => {
+  const db = openDatabase(":memory:");
+  t.after(() => db.close());
+  await seed(db);
+  const results = await Promise.allSettled(
+    Array.from({ length: 8 }, () =>
+      login(
+        db,
+        { identity: "student@school.edu.vn", password: "wrong-password" },
+        "parallel",
+      ),
+    ),
+  );
+  assert.equal(results.filter((r) => r.status === "fulfilled").length, 0);
+  assert.equal(results.filter((r) => r.reason?.status === 401).length, 3);
+  await assert.rejects(
+    login(
+      db,
+      { identity: "student@school.edu.vn", password: "Canteen@123" },
+      "parallel",
+    ),
+    { status: 429 },
+  );
+});
 
 test("DB01 — yêu cầu khác không đọc dữ liệu chưa commit qua cùng kết nối", async (t) => {
   const db = openDatabase(":memory:");

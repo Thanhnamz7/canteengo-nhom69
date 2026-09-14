@@ -1,6 +1,7 @@
 # CanteenGo trên GitHub và Vercel
 
 - GitHub private: https://github.com/thanhnam710/canteengo-nhom69
+- Website: https://canteengo-nhom69.vercel.app
 - Vercel project: https://vercel.com/namnamnam/canteengo-nhom69
 - Database: Turso `canteengo-nhom69`, tạo qua Vercel Marketplace, kết nối với project cùng tên.
 
@@ -23,6 +24,12 @@ npx vercel deploy --prod --scope namnamnam
 ```
 
 `vercel.json` phục vụ static từ `public/`, chuyển `/api/*` tới `api/index.js`, chạy tại Singapore. Module API khởi tạo kết nối khi có yêu cầu, tự thử lại nếu lần khởi tạo trước thất bại. Dữ liệu được lưu trên Turso, giao dịch ghi có commit/rollback. Schema và dữ liệu mẫu được tạo theo cách an toàn khi nhiều instance cùng khởi động.
+
+Hiện triển khai bằng Vercel CLI. Liên kết tự deploy theo GitHub push chưa bật: tài khoản Vercel cần thêm GitHub Login Connection trước khi `vercel git connect` chấp nhận repository. Mã nguồn đã push lên GitHub; hạn chế này không ảnh hưởng website đang chạy.
+
+## Xác minh bản online
+
+Ngày 14/09/2026: kiểm tra API thực tế thành công với tài khoản kiểm thử riêng: đăng ký, đăng nhập, nạp ví, hai yêu cầu đặt món cùng mã tham chiếu trả về cùng một đơn, nhận đơn trừ kho, hủy hoàn đủ kho và tiền, hủy lặp bị từ chối, phân quyền và đăng xuất thu hồi phiên. Đơn kiểm thử được giữ ở trạng thái đã hủy để có lịch sử đối chiếu. Giao diện tải đủ 7 món và khung giờ nhận.
 
 ## Chế độ demo
 

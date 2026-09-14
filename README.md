@@ -50,7 +50,7 @@ npm run check
 npm test
 ```
 
-41 kiểm thử tự động: TC01–TC21 theo đặc tả, 8 ca nghiệp vụ bổ sung, 7 ca HTTP, 3 ca khởi động khi trùng/sai cổng và 2 ca kiểm tra adapter/transaction bất đồng bộ. Các ca tranh tồn kho và chỗ cuối của slot dùng **hai worker với hai kết nối SQLite riêng** và hàng rào đồng bộ. Test dùng dữ liệu độc lập, không sửa cơ sở dữ liệu demo.
+42 kiểm thử tự động: TC01–TC21 theo đặc tả, 8 ca nghiệp vụ bổ sung, 7 ca HTTP, 3 ca khởi động khi trùng/sai cổng và 3 ca kiểm tra adapter/transaction bất đồng bộ và khóa đăng nhập đồng thời. Các ca tranh tồn kho và chỗ cuối của slot dùng **hai worker với hai kết nối SQLite riêng** và hàng rào đồng bộ. Test dùng dữ liệu độc lập, không sửa cơ sở dữ liệu demo.
 
 Xem [báo cáo kiểm thử](docs/KIEM_THU.md), [phân tích đặc tả](docs/PHAN_TICH.md), [thiết kế và API](docs/KIEN_TRUC_API.md), [kịch bản demo](docs/DEMO.md).
 

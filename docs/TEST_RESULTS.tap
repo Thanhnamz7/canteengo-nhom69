@@ -1,256 +1,276 @@
 TAP version 13
-# (node:11284) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (node:24404) ExperimentalWarning: SQLite is an experimental feature and might change at any time
 # (Use `node --trace-warnings ...` to show where the warning was created)
 # Subtest: TC01 — đăng nhập đúng trả về đúng vai trò
 ok 1 - TC01 — đăng nhập đúng trả về đúng vai trò
   ---
-  duration_ms: 229.1039
+  duration_ms: 169.5487
   type: 'test'
   ...
 # Subtest: TC02 — ba lần sai, khóa lần tiếp theo trong 60 giây
 ok 2 - TC02 — ba lần sai, khóa lần tiếp theo trong 60 giây
   ---
-  duration_ms: 196.0587
+  duration_ms: 137.2095
   type: 'test'
   ...
 # Subtest: TC03 — từ chối email rỗng hoặc sai định dạng
 ok 3 - TC03 — từ chối email rỗng hoặc sai định dạng
   ---
-  duration_ms: 55.9243
+  duration_ms: 34.0619
   type: 'test'
   ...
 # Subtest: TC04 — 2 suất lưu đúng số lượng, giá, ghi chú và tổng
 ok 4 - TC04 — 2 suất lưu đúng số lượng, giá, ghi chú và tổng
   ---
-  duration_ms: 71.7818
+  duration_ms: 40.1158
   type: 'test'
   ...
 # Subtest: TC05 — món vừa hết bị chặn lúc chốt đơn
 ok 5 - TC05 — món vừa hết bị chặn lúc chốt đơn
   ---
-  duration_ms: 54.8752
+  duration_ms: 37.0156
   type: 'test'
   ...
 # Subtest: TC06 — không nhận lượng 0, âm, lẻ hoặc chuỗi
 ok 6 - TC06 — không nhận lượng 0, âm, lẻ hoặc chuỗi
   ---
-  duration_ms: 56.7749
+  duration_ms: 38.2219
   type: 'test'
   ...
 # Subtest: TC07 — slot đầy hoặc quá giờ không tạo đơn
 ok 7 - TC07 — slot đầy hoặc quá giờ không tạo đơn
   ---
-  duration_ms: 54.503
+  duration_ms: 42.2168
   type: 'test'
   ...
 # Subtest: TC08 — ví 100000, đơn 40000, còn 60000 và một thanh toán
 ok 8 - TC08 — ví 100000, đơn 40000, còn 60000 và một thanh toán
   ---
-  duration_ms: 52.2489
+  duration_ms: 38.862
   type: 'test'
   ...
 # Subtest: TC09 — ví thiếu tiền không thay đổi dữ liệu
 ok 9 - TC09 — ví thiếu tiền không thay đổi dữ liệu
   ---
-  duration_ms: 57.9562
+  duration_ms: 44.4677
   type: 'test'
   ...
 # Subtest: TC10 — gửi lặp thanh toán trả cùng đơn, không trừ lặp; ref khác nội dung bị chặn
 ok 10 - TC10 — gửi lặp thanh toán trả cùng đơn, không trừ lặp; ref khác nội dung bị chặn
   ---
-  duration_ms: 60.2395
+  duration_ms: 37.2088
   type: 'test'
   ...
 # Subtest: TC11 — nhận đơn trừ đúng nguyên liệu và không trừ lặp
 ok 11 - TC11 — nhận đơn trừ đúng nguyên liệu và không trừ lặp
   ---
-  duration_ms: 56.1579
+  duration_ms: 38.8788
   type: 'test'
   ...
 # Subtest: TC12 — từ chối đơn hoàn tiền, giải phóng chỗ, không hoàn kho
 ok 12 - TC12 — từ chối đơn hoàn tiền, giải phóng chỗ, không hoàn kho
   ---
-  duration_ms: 59.8737
+  duration_ms: 42.4715
   type: 'test'
   ...
 # Subtest: TC13 — chỉ chuyển đúng thứ tự, không giao lần hai
 ok 13 - TC13 — chỉ chuyển đúng thứ tự, không giao lần hai
   ---
-  duration_ms: 67.032
+  duration_ms: 37.9247
   type: 'test'
   ...
 # Subtest: TC14 — 2 đơn hoàn tất 30000 + 40000; đơn hủy không vào doanh thu
 ok 14 - TC14 — 2 đơn hoàn tất 30000 + 40000; đơn hủy không vào doanh thu
   ---
-  duration_ms: 77.174
+  duration_ms: 40.2576
   type: 'test'
   ...
 # Subtest: TC15 — báo cáo ngày trống trả 0
 ok 15 - TC15 — báo cáo ngày trống trả 0
   ---
-  duration_ms: 55.0028
+  duration_ms: 35.0233
   type: 'test'
   ...
 # Subtest: TC16 — đánh giá đơn chưa hoàn tất hoặc của người khác bị chặn
 ok 16 - TC16 — đánh giá đơn chưa hoàn tất hoặc của người khác bị chặn
   ---
-  duration_ms: 54.3497
+  duration_ms: 33.4362
   type: 'test'
   ...
 # Subtest: TC17 — recipe 150g gạo + 100g gà lưu chính xác
 ok 17 - TC17 — recipe 150g gạo + 100g gà lưu chính xác
   ---
-  duration_ms: 54.2402
+  duration_ms: 36.3519
   type: 'test'
   ...
 # Subtest: TC18 — kho 250g, cần 300g: báo thiếu 50g và rollback toàn bộ
 ok 18 - TC18 — kho 250g, cần 300g: báo thiếu 50g và rollback toàn bộ
   ---
-  duration_ms: 56.3238
+  duration_ms: 33.4025
   type: 'test'
   ...
 # Subtest: TC19 — 2 suất trừ 300g gạo và 200g gà
 ok 19 - TC19 — 2 suất trừ 300g gạo và 200g gà
   ---
-  duration_ms: 58.1804
+  duration_ms: 33.19
   type: 'test'
   ...
 # Subtest: TC20 — hủy sau chế biến hoàn đúng snapshot dù đã sửa recipe
 ok 20 - TC20 — hủy sau chế biến hoàn đúng snapshot dù đã sửa recipe
   ---
-  duration_ms: 55.4665
+  duration_ms: 34.8096
   type: 'test'
   ...
-# (node:11284) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (node:24404) ExperimentalWarning: SQLite is an experimental feature and might change at any time
 # (Use `node --trace-warnings ...` to show where the warning was created)
-# (node:11284) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (node:24404) ExperimentalWarning: SQLite is an experimental feature and might change at any time
 # (Use `node --trace-warnings ...` to show where the warning was created)
 # Subtest: TC21 — hai worker/kết nối DB tranh 300g gạo, mỗi đơn cần 200g
 ok 21 - TC21 — hai worker/kết nối DB tranh 300g gạo, mỗi đơn cần 200g
   ---
-  duration_ms: 185.7051
+  duration_ms: 120.7373
   type: 'test'
   ...
-# (node:11284) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (node:24404) ExperimentalWarning: SQLite is an experimental feature and might change at any time
 # (Use `node --trace-warnings ...` to show where the warning was created)
-# (node:11284) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (node:24404) ExperimentalWarning: SQLite is an experimental feature and might change at any time
 # (Use `node --trace-warnings ...` to show where the warning was created)
 # Subtest: EX01 — hai kết nối tranh chỗ cuối của slot
 ok 22 - EX01 — hai kết nối tranh chỗ cuối của slot
   ---
-  duration_ms: 175.1461
+  duration_ms: 117.1678
   type: 'test'
   ...
 # Subtest: EX02 — nhiều món dùng chung nguyên liệu được cộng gộp
 ok 23 - EX02 — nhiều món dùng chung nguyên liệu được cộng gộp
   ---
-  duration_ms: 54.7957
+  duration_ms: 33.3802
   type: 'test'
   ...
 # Subtest: EX03 — recipe trùng, sai đơn vị, 0/âm không làm mất recipe cũ
 ok 24 - EX03 — recipe trùng, sai đơn vị, 0/âm không làm mất recipe cũ
   ---
-  duration_ms: 53.4836
+  duration_ms: 30.9736
   type: 'test'
   ...
 # Subtest: EX04 — chặn giá cũ và ngày không bán; giữ snapshot giá
 ok 25 - EX04 — chặn giá cũ và ngày không bán; giữ snapshot giá
   ---
-  duration_ms: 56.7979
+  duration_ms: 33.0956
   type: 'test'
   ...
 # Subtest: EX05 — phân quyền và quyền sở hữu được kiểm tra ở máy chủ
 ok 26 - EX05 — phân quyền và quyền sở hữu được kiểm tra ở máy chủ
   ---
-  duration_ms: 55.3494
+  duration_ms: 31.3253
   type: 'test'
   ...
 # Subtest: EX06 — nạp ví và nhập kho chống lặp, không xuất âm
 ok 27 - EX06 — nạp ví và nhập kho chống lặp, không xuất âm
   ---
-  duration_ms: 54.9523
+  duration_ms: 32.0881
   type: 'test'
   ...
 # Subtest: EX07 — đăng ký trường/khách, băm mật khẩu và chặn trùng
 ok 28 - EX07 — đăng ký trường/khách, băm mật khẩu và chặn trùng
   ---
-  duration_ms: 156.4895
+  duration_ms: 81.8155
   type: 'test'
   ...
 # Subtest: EX08 — thiếu Recipe chặn nhận đơn; xóa món giữ lịch sử
 ok 29 - EX08 — thiếu Recipe chặn nhận đơn; xóa món giữ lịch sử
   ---
-  duration_ms: 54.97
+  duration_ms: 32.2669
   type: 'test'
   ...
-# (node:7124) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (node:23132) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: DB03 — đăng nhập sai đồng thời không đặt lại khóa 60 giây
+ok 30 - DB03 — đăng nhập sai đồng thời không đặt lại khóa 60 giây
+  ---
+  duration_ms: 146.1096
+  type: 'test'
+  ...
+# Subtest: DB01 — yêu cầu khác không đọc dữ liệu chưa commit qua cùng kết nối
+ok 31 - DB01 — yêu cầu khác không đọc dữ liệu chưa commit qua cùng kết nối
+  ---
+  duration_ms: 37.3705
+  type: 'test'
+  ...
+# Subtest: DB02 — libSQL adapter khởi tạo batch, seed lặp và rollback giao dịch
+ok 32 - DB02 — libSQL adapter khởi tạo batch, seed lặp và rollback giao dịch
+  ---
+  duration_ms: 111.7265
+  type: 'test'
+  ...
+# (node:24256) ExperimentalWarning: SQLite is an experimental feature and might change at any time
 # (Use `node --trace-warnings ...` to show where the warning was created)
 # Subtest: HTTP01 — cookie HttpOnly, phiên đăng nhập, đăng xuất
-ok 30 - HTTP01 — cookie HttpOnly, phiên đăng nhập, đăng xuất
+ok 33 - HTTP01 — cookie HttpOnly, phiên đăng nhập, đăng xuất
   ---
-  duration_ms: 203.3952
+  duration_ms: 143.8384
   type: 'test'
   ...
 # Subtest: HTTP02 — cấm CSRF, JSON sai và truy cập vận hành trái quyền
-ok 31 - HTTP02 — cấm CSRF, JSON sai và truy cập vận hành trái quyền
+ok 34 - HTTP02 — cấm CSRF, JSON sai và truy cập vận hành trái quyền
   ---
-  duration_ms: 120.011
+  duration_ms: 86.7435
   type: 'test'
   ...
 # Subtest: HTTP03 — static, ảnh và header bảo vệ chạy không phụ thuộc CDN
-ok 32 - HTTP03 — static, ảnh và header bảo vệ chạy không phụ thuộc CDN
+ok 35 - HTTP03 — static, ảnh và header bảo vệ chạy không phụ thuộc CDN
   ---
-  duration_ms: 81.3882
+  duration_ms: 57.4424
   type: 'test'
   ...
 # Subtest: HTTP04 — đặt món → bếp → giao → đánh giá → báo cáo
-ok 33 - HTTP04 — đặt món → bếp → giao → đánh giá → báo cáo
+ok 36 - HTTP04 — đặt món → bếp → giao → đánh giá → báo cáo
   ---
-  duration_ms: 254.7221
+  duration_ms: 159.5504
   type: 'test'
   ...
 # Subtest: HTTP05 — SSE thông báo thay đổi và không lộ dữ liệu người khác
-ok 34 - HTTP05 — SSE thông báo thay đổi và không lộ dữ liệu người khác
+ok 37 - HTTP05 — SSE thông báo thay đổi và không lộ dữ liệu người khác
   ---
-  duration_ms: 118.6335
+  duration_ms: 81.6261
   type: 'test'
   ...
 # Subtest: HTTP06 — khóa tài khoản thu hồi phiên ngay
-ok 35 - HTTP06 — khóa tài khoản thu hồi phiên ngay
+ok 38 - HTTP06 — khóa tài khoản thu hồi phiên ngay
   ---
-  duration_ms: 164.2824
+  duration_ms: 111.466
   type: 'test'
   ...
 # Subtest: HTTP07 — đăng xuất khi SSE còn mở không làm máy chủ ghi vào stream đã đóng
-ok 36 - HTTP07 — đăng xuất khi SSE còn mở không làm máy chủ ghi vào stream đã đóng
+ok 39 - HTTP07 — đăng xuất khi SSE còn mở không làm máy chủ ghi vào stream đã đóng
   ---
-  duration_ms: 188.0093
+  duration_ms: 108.0674
   type: 'test'
   ...
 # Subtest: START01 — cổng bận tự chuyển sang cổng khác, không dừng dịch vụ đang chạy
-ok 37 - START01 — cổng bận tự chuyển sang cổng khác, không dừng dịch vụ đang chạy
+ok 40 - START01 — cổng bận tự chuyển sang cổng khác, không dừng dịch vụ đang chạy
   ---
-  duration_ms: 67.872
+  duration_ms: 53.2074
   type: 'test'
   ...
 # Subtest: START02 — hết cổng trong khoảng thử trả lỗi có hướng dẫn
-ok 38 - START02 — hết cổng trong khoảng thử trả lỗi có hướng dẫn
+ok 41 - START02 — hết cổng trong khoảng thử trả lỗi có hướng dẫn
   ---
-  duration_ms: 4.7528
+  duration_ms: 3.4374
   type: 'test'
   ...
 # Subtest: START03 — từ chối cổng cấu hình sai
-ok 39 - START03 — từ chối cổng cấu hình sai
+ok 42 - START03 — từ chối cổng cấu hình sai
   ---
-  duration_ms: 0.8368
+  duration_ms: 0.6915
   type: 'test'
   ...
-1..39
-# tests 39
+1..42
+# tests 42
 # suites 0
-# pass 39
+# pass 42
 # fail 0
 # cancelled 0
 # skipped 0
 # todo 0
-# duration_ms 2496.1559
+# duration_ms 1599.0667

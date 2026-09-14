@@ -152,10 +152,10 @@ export async function login(db, data, ip) {
     user?.password_hash ||
       "00000000000000000000000000000000:" + "00".repeat(64),
   );
-  // Recheck after asynchronous password hashing to enforce concurrent failure limits.
-  await checkLock();
-  if (!user || !valid || !user.active) {
-    await transaction(db, async () => {
+  // Recheck under the write lock so concurrent failures cannot reset a new lock.
+  const accepted = await transaction(db, async () => {
+    await checkLock();
+    if (!user || !valid || !user.active) {
       const prev = await db
         .prepare("SELECT * FROM login_attempts WHERE key=?")
         .get(key);
@@ -163,12 +163,16 @@ export async function login(db, data, ip) {
       await db
         .prepare("INSERT OR REPLACE INTO login_attempts VALUES(?,?,?)")
         .run(key, count, count >= 3 ? Date.now() + 60000 : 0);
-    });
+      return false;
+    }
+    await db.prepare("DELETE FROM login_attempts WHERE key=?").run(key);
+    return true;
+  });
+  if (!accepted) {
     throw new AppError(
       "Thông tin đăng nhập không đúng hoặc tài khoản bị khóa.",
       401,
     );
   }
-  await db.prepare("DELETE FROM login_attempts WHERE key=?").run(key);
   return user;
 }
