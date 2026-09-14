@@ -1,6 +1,6 @@
 # CanteenGo trên GitHub và Vercel
 
-- GitHub private: https://github.com/thanhnam710/canteengo-nhom69
+- GitHub private: https://github.com/Thanhnamz7/canteengo-nhom69
 - Website: https://canteengo-nhom69.vercel.app
 - Vercel project: https://vercel.com/namnamnam/canteengo-nhom69
 - Database: Turso `canteengo-nhom69`, tạo qua Vercel Marketplace, kết nối với project cùng tên.
