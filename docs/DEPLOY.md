@@ -25,7 +25,7 @@ npx vercel deploy --prod --scope namnamnam
 
 `vercel.json` phục vụ static từ `public/`, chuyển `/api/*` tới `api/index.js`, chạy tại Singapore. Module API khởi tạo kết nối khi có yêu cầu, tự thử lại nếu lần khởi tạo trước thất bại. Dữ liệu được lưu trên Turso, giao dịch ghi có commit/rollback. Schema và dữ liệu mẫu được tạo theo cách an toàn khi nhiều instance cùng khởi động.
 
-Hiện triển khai bằng Vercel CLI. Liên kết tự deploy theo GitHub push chưa bật: tài khoản Vercel cần thêm GitHub Login Connection trước khi `vercel git connect` chấp nhận repository. Mã nguồn đã push lên GitHub; hạn chế này không ảnh hưởng website đang chạy.
+Repository `Thanhnamz7/canteengo-nhom69` đã kết nối với Vercel. Push vào nhánh `main` sẽ tạo bản production mới; vẫn có thể triển khai thủ công bằng CLI như trên. Git của project dùng tên `Thanhnamz7` và địa chỉ noreply do GitHub cấp để Vercel nhận diện đúng tác giả commit.
 
 ## Xác minh bản online
 
